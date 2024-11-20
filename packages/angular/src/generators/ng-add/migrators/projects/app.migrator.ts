@@ -455,7 +455,7 @@ export class AppMigrator extends ProjectMigrator<SupportedTargets> {
           this.convertPath(serveSsrTarget.options[option]);
       }
 
-      for (const configuration of Object.values(
+      for (const configuration of Object.keys(
         serveSsrTarget.configurations ?? {}
       )) {
         serveSsrTarget.configurations[configuration][option] =
